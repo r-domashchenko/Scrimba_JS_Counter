@@ -7,15 +7,18 @@
 
     .counter {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
         box-shadow: 4px 6px 10px #828282;
+        padding-bottom: 60px;
         position: relative;
         width: 480px;
-        height: 560px;
-        border-radius: 50px;
+        height: 600px;
+        border-radius: 60px;
         background: linear-gradient(219.63deg, #282933 0%, #474850 100%);
 
         &__title {
+            display: block;
             margin-top: 60px;
             font-weight: 500;
             font-size: 32px;
@@ -25,19 +28,19 @@
         }
 
         &__number-container {
-            padding: 0 20px;
             z-index: 1;
             display: flex;
-            justify-content: center;
-            position: absolute;
-            left: 20%;
-            top: 175px;
-            min-width: 200px;
-            width: content;
-            height: 200px;
+            margin: 0 auto;
+            margin-top: 45px;
+            min-width: 240px;
+            width: max-content;
+            min-height: 240px;
             background: #4CA3BC;
-            box-shadow: 0px 5px 10px #474850;
             border-radius: 50%;
+            box-shadow: -5px -5px 5px #474850,
+            5px 10px 10px 2px #2C2D36,
+            inset 5px 10px 10px #6FD3F0,
+            inset -5px -10px 10px #31788C;
         }
 
         &__number {
@@ -45,40 +48,50 @@
             margin: auto;
             font-weight: 500;
             font-size: 96px;
-            line-height: 96px;
+            line-height: 0px;
             text-align: center;
             color: #FFFFFF;
         }
-
-        &__increment-button {
-            position: absolute;
-            right: 118px;
-            bottom: 110px;
-            width: 116px;
-            height: 116px;
-            background-color: #E88406;
+        .btn-container {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 45px;
+        }
+        &__btn {
+            display: block;
+            width: 110px;
+            height: 110px;
+            text-transform: uppercase;
 
             font-style: normal;
-            line-height: 24px;
+            line-height: 0px;
             font-weight: 700;
-            font-size: 20px;
+            font-size: 48px;
             text-align: center;
             color: #FFFFFF;
             border: none;
             border-radius: 50%;
             transition: 0.3s all;
+            background-color: #E88406;
+                &:hover {
+                    filter: drop-shadow(0px 0px 2px #E88406);
+                    background-color: #A46619;
+                }
 
-            &:hover {
-                filter: drop-shadow(0px 0px 10px #E88406);
-                background-color: #A46619;
+                &:active {
+                    box-shadow: inset 0px 0px 15px #221504;
+                    background-color: white;
+                    color: #221504;
+                    filter: none;
+                }
+
+            &_clear,
+            &_save {
+                font-size: 20px;
+                width: 90px;
+                height: 90px;
             }
 
-            &:active {
-                box-shadow: inset 0px 0px 15px #221504;
-                background-color: white;
-                color: #221504;
-                filter: none;
-            }
         }
     }
 
