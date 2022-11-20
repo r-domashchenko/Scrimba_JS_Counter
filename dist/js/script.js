@@ -4,18 +4,19 @@ let countNumber = 0;
 
 function increment() {
     countNumber++;
-    numberText.innerText = countNumber;
+    numberText.textContent = countNumber;
 };
 
 function save() {
-    let countStr ='-' + countNumber + '-';
-    savePlaceholder.innerText += countStr;
+    let countStr = countNumber + ' - ';
+    savePlaceholder.textContent += countStr;
+    numberText.textContent = 0;
+    countNumber = 0;
 };
 
 function clearSaved() {
     console.log('clear btn pressed');
     let clearSave = document.getElementById('save-placeholder');
-    numberText.innerText = 0;
-    savePlaceholder.innerText = '';
-    
+    numberText.textContent = 0;
+    savePlaceholder.textContent = '';
 };
