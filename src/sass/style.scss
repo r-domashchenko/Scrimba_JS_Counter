@@ -1,0 +1,18 @@
+
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/animation';
+
+
+* {
+    font-family: 'MuseoModerno', cursive;
+}
+
+body {
+    box-sizing: border-box;
+    background: linear-gradient(116.1deg, #D1C9B7 37.06%, #AAA28E 90.48%);
+}
+
+@import 'blocks/counter';
+
+@import 'base/media';

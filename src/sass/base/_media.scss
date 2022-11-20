@@ -1,0 +1,15 @@
+@media screen and (max-width: 450px) {
+    .container {
+        .counter {
+            &__number-container {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &__button-add {
+                bottom: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
