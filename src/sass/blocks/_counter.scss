@@ -4,6 +4,7 @@
     align-items: center;
     height: 100vh;
     padding: 0 10px;
+
     .counter {
         display: flex;
         justify-content: center;
@@ -36,6 +37,7 @@
             box-shadow: 0px 5px 10px #474850;
             border-radius: 50%;
         }
+
         &__number {
             display: block;
             margin: auto;
@@ -45,7 +47,8 @@
             text-align: center;
             color: #FFFFFF;
         }
-        &__button-add {
+
+        &__increment-button {
             position: absolute;
             right: 118px;
             bottom: 110px;
@@ -62,10 +65,12 @@
             border: none;
             border-radius: 50%;
             transition: 0.3s all;
+
             &:hover {
                 filter: drop-shadow(0px 0px 10px #E88406);
                 background-color: #A46619;
             }
+
             &:active {
                 box-shadow: inset 0px 0px 15px #221504;
                 background-color: white;
