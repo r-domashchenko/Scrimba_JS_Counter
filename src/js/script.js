@@ -1,10 +1,14 @@
 // document.getElementById('number').innerText = 2;
-let number = 0;
+let countNumber = 0;
 
 function increment() {
     console.log('click');
-    number++;
-    console.log(number);
-    document.getElementById('number').innerText = number;
+    countNumber++;
+    console.log(countNumber);
+    document.getElementById('number').innerText = countNumber;
     return number;
 };
+
+function save() {
+    console.log('saved number is:' + countNumber);
+}
