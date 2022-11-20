@@ -1,14 +1,21 @@
-// document.getElementById('number').innerText = 2;
+let numberText = document.getElementById('number');
+let savePlaceholder = document.getElementById('save-placeholder');
 let countNumber = 0;
 
 function increment() {
-    console.log('click');
     countNumber++;
-    console.log(countNumber);
-    document.getElementById('number').innerText = countNumber;
-    return number;
+    numberText.innerText = countNumber;
 };
 
 function save() {
-    console.log('saved number is:' + countNumber);
-}
+    let countStr ='-' + countNumber + '-';
+    savePlaceholder.innerText += countStr;
+};
+
+function clearSaved() {
+    console.log('clear btn pressed');
+    let clearSave = document.getElementById('save-placeholder');
+    numberText.innerText = 0;
+    savePlaceholder.innerText = '';
+    
+};
