@@ -1,5 +1,10 @@
 // document.getElementById('number').innerText = 2;
+let number = 0;
 
-let number = 5;
-
-console.log(number);
+function increment() {
+    console.log('click');
+    number++;
+    console.log(number);
+    document.getElementById('number').innerText = number;
+    return number;
+};
